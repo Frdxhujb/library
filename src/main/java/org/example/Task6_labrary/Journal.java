@@ -1,7 +1,6 @@
 package org.example.Task6_labrary;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Journal {
     private Calendar dateOfIssue;
@@ -21,7 +20,6 @@ public class Journal {
         this.authorBook = book.getAuthor();
         this.numberCard = card.getNumberCard();
         this.dateOfIssue = dateOfIssue;
-        this.dateReturn = new GregorianCalendar(0,0,0);
 //        this.dateReturn = (Calendar) dateOfIssue.clone();
 //        this.dateReturn.add(Calendar.DAY_OF_MONTH, term);
         this.term = term;
@@ -79,11 +77,32 @@ public class Journal {
     public String toString() {
         return "\nJournal {" +
                 "\nДата выдачи: " + dateOfIssue.getTime() +
-                ", \nДата возврата: " + dateReturn.getTime() +
+//                ", \nДата возврата: " + dateReturn.getTime() +
                 ", \nСрок выдачи: " + term +
                 ", \nНазвание книги: " + titleBook +
                 ", \nАвтор: " + authorBook +
                 ", \nНомер читательского билета: " + numberCard +
                 '}';
     }
+
+//    public String returnToString() {
+//        return "\nJournal {" +
+//                "\nДата выдачи: " + dateOfIssue.getTime() +
+//                ", \nДата возврата: " + dateReturn.getTime() +
+//                ", \nСрок выдачи: " + term +
+//                ", \nНазвание книги: " + titleBook +
+//                ", \nАвтор: " + authorBook +
+//                ", \nНомер читательского билета: " + numberCard +
+//                '}';
+//    }
+//
+//    public String issueToString() {
+//        return "\nJournal {" +
+//                "\nДата выдачи: " + dateOfIssue.getTime() +
+//                ", \nСрок выдачи: " + term +
+//                ", \nНазвание книги: " + titleBook +
+//                ", \nАвтор: " + authorBook +
+//                ", \nНомер читательского билета: " + numberCard +
+//                '}';
+//    }
 }
